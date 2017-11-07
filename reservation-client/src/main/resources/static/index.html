@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello HTML</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <button id="btn">Get Reservations</button>
+    <script>
+        $('#btn').click(function () {
+            $.ajax({
+                url: '/rest-hk/reservations'
+            }).done(function (data) {
+                console.log(data);
+            });
+        });
+    </script>
+</body>
+</html>
